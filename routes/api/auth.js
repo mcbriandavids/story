@@ -14,4 +14,7 @@ passport.authenticate('google', {failureRedirect:'/login'}),
 }
 )
 
-module.exports = router
+
+
+
+module.exports = router;

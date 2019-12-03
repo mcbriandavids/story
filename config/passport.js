@@ -1,19 +1,13 @@
-const GoogleStrategy = require('passport-google-oauth20').Strategy
-const config = require('config');
-
-const passport = passport=>{
-  passport.use(new GoogleStrategy({
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const config = require('config')
+module.exports =function(passport){passport.use(new GoogleStrategy({
     clientID: config.get('googleClientID'),
     clientSecret: config.get('googleClientSecret'),
-    callbackURL: "/auth/google/callback",
-    proxy: true
-},
-(accessToken, refreshToken, profile, done)=>{
-  console.log(accessToken)
-  console.log(profile)
+    callbackURL: "http://https://storybooks2019.herokuapp.com/auth/google/callback"
+  },
+  function(accessToken, refreshToken, profile, cb) {
+ console.log(accessToken)
+ console.log(profile)
+  }
+));
 }
-
-))
-}
-
-module.exports = passport
