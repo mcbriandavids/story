@@ -1,0 +1,5 @@
+{
+	"mongoURI": "mongodb://Brian:brian123456@ds225375.mlab.com:25375/brian-project2",
+	"googleClientID": "617086778306-qh6uuu2q7l6vrkre23t2ijm21n4l6r62.apps.googleusercontent.com",
+	"googleClientSecret": "DQdRZPeMtABGXGD0XzfMg7GJ"
+}
