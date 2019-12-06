@@ -19,8 +19,8 @@ const UserSchema = new Schema({
   image:{
     type: String,
     
-  },
+  }
  
 })
 
-module.exports = User = mongoose.model('user', UserSchema)
+module.exports = User = mongoose.model('users', UserSchema)

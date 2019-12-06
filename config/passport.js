@@ -1,12 +1,12 @@
-const config = require('config')
+const keys = require('./keys')
 const User = require('../models/user')
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 
 
 const passport = passport=>{
   passport.use(new GoogleStrategy({
-    clientID: config.get('googleClientID'),
-    clientSecret: config.get('googleClientSecret'),
+    clientID: keys.googleClientID,
+    clientSecret: keys.googleClientSecret,
     callbackURL: "/auth/google/callback"
 },
 (accessToken, refreshToken, profile, done)=>{
